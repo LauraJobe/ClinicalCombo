@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MedStation Practice Simulator</title>
+<meta name="description" content="Practice automated medication dispensing cabinet workflows: sign in with BioID or password, remove, override, waste, return and resolve discrepancies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="shell">
+  <section class="device-wrap" id="device" aria-label="Medication dispensing cabinet simulator">
+    <div class="quickbar" id="quickbar" aria-label="Cabinet and practice mode"></div>
+    <div class="device">
+      <div class="screen standby" id="screen">
+        <header class="topbar" id="topbar"></header>
+        <div class="titlebar" id="titlebar"></div>
+        <main class="content" id="content"></main>
+        <footer class="actionbar" id="actionbar"></footer>
+        <nav class="sidel" id="sidel" aria-label="Screen options"></nav>
+        <div class="hintbar" id="hintbar"></div>
+        <nav class="tabsbar" id="tabsbar" aria-label="Tabs"></nav>
+        <div class="overlay" id="overlay" hidden></div>
+      </div>
+    </div>
+    <button class="coach-jump" id="coachJump" type="button">Open the Practice Coach ↓</button>
+    <p class="disclaimer">Educational simulator. Workflows are modeled on published BD Pyxis™ MedStation™ ES job aids and the Omnicell® Color Touch user guide; this site is not affiliated with or endorsed by BD or Omnicell. All patients and orders are fictional. Do not enter real patient information.</p>
+  </section>
+  <aside class="coach" id="coach" aria-label="Practice coach"></aside>
+</div>
+<script src="js/data.js"></script>
+<!-- ClinicalCombo: shared scenario data and the bridge to the EMR and bedside -->
+<script src="../combo/bridge.js"></script>
+<script src="../combo/scenarios.js"></script>
+<script src="js/combo-medstation.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
